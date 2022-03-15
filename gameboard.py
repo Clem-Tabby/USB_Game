@@ -1,9 +1,10 @@
 
 import pygame
 from coin import Coin
+from obstacle import Obstacle
 from player import Player
 from settings import screen_height, screen_width, coin_spawn_percent, \
-    background_color
+    background_color, obstacle_spawn_percent
 import random
 from sounds import sfx, bump, bling
 
@@ -16,6 +17,7 @@ class Gameboard:
         # Define sprite groups
         self.coins = pygame.sprite.Group()
         self.player = pygame.sprite.Group()
+        self.obstacles = pygame.sprite.Group()
         self.player1 = Player((screen_width / 2, screen_height / 2))
         self.player.add(self.player1)
 
@@ -42,6 +44,11 @@ class Gameboard:
             coin = Coin((screen_width, int(random.uniform(0, screen_height - 16))))
             self.coins.add(coin)
 
+    def spawn_obstacles(self, obstacle_spawn_percent):
+        if random.uniform(0, 100) <= obstacle_spawn_percent:
+            obstacle = Obstacle((screen_width, int(random.uniform(0, screen_height - 16))))
+            self.obstacles.add(obstacle)
+
     def check_coin_collision(self):
         for coin in self.coins.sprites():
             if self.player1.rect.colliderect(coin.rect):
@@ -51,17 +58,28 @@ class Gameboard:
             elif coin.rect.x < -coin.rect.width:
                 coin.kill()
 
+    def check_obstacle_collision(self):
+        for obstacle in self.obstacles.sprites():
+            if self.player1.rect.colliderect(obstacle.rect):
+                obstacle.hit = True
+            elif obstacle.rect.x < -obstacle.rect.width:
+                obstacle.kill()
+
     def run(self):
         if self.joystick_count != 0:
             horiz_axis_pos = self.my_joystick.get_axis(0)
             vert_axis_pos = self.my_joystick.get_axis(1)
             self.player1.update((horiz_axis_pos, vert_axis_pos))
         self.spawn_coins(coin_spawn_percent)
+        self.spawn_obstacles(obstacle_spawn_percent)
         self.check_coin_collision()
+        self.check_obstacle_collision()
         self.coins.update()
+        self.obstacles.update()
         self.surface.fill(background_color)
         self.draw_score(self.surface)
         self.player.draw(self.surface)
+        self.obstacles.draw(self.surface)
         self.coins.draw(self.surface)
         if self.player1.check_bump(screen_width, screen_height):
             sfx.play(bump)
