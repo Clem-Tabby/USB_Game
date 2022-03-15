@@ -28,8 +28,8 @@ class Player(pygame.sprite.Sprite):
         elif self.rect.x > screen_width - self.rect.width:
             self.rect.x = screen_width - self.rect.width
             self.hit = True
-        elif self.rect.y < 0:
-            self.rect.y = 0
+        elif self.rect.y < 35:
+            self.rect.y = 35
             self.hit = True
         elif self.rect.y > screen_height - self.rect.height:
             self.rect.y = screen_height - self.rect.height

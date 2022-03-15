@@ -6,7 +6,7 @@ from player import Player
 from settings import screen_height, screen_width, coin_spawn_percent, \
     background_color, obstacle_spawn_percent
 import random
-from sounds import sfx, bump, bling
+from sounds import bump, bling, hit
 
 class Gameboard:
 
@@ -33,7 +33,6 @@ class Gameboard:
         score_string = 'SCORE: ' + str(self.score)
         score_font = pygame.font.Font('freesansbold.ttf', 25)
         score_text = score_font.render(score_string, True, (0, 0, 0))
-        text_width, text_height = score_font.size(score_string)
         surface.blit(score_text, (10,10))
 
     # spawns coins randomly along right edge of board,
@@ -41,27 +40,29 @@ class Gameboard:
     # per tick of the game clock
     def spawn_coins(self, coin_spawn_percent):
         if random.uniform(0, 100) <= coin_spawn_percent:
-            coin = Coin((screen_width, int(random.uniform(0, screen_height - 16))))
+            coin = Coin((screen_width, int(random.uniform(35, screen_height - 16))))
             self.coins.add(coin)
 
+    # functions similarly to spawn_coins method
     def spawn_obstacles(self, obstacle_spawn_percent):
         if random.uniform(0, 100) <= obstacle_spawn_percent:
-            obstacle = Obstacle((screen_width, int(random.uniform(0, screen_height - 16))))
+            obstacle = Obstacle((screen_width, int(random.uniform(35, screen_height - 16))))
             self.obstacles.add(obstacle)
 
     def check_coin_collision(self):
         for coin in self.coins.sprites():
             if self.player1.rect.colliderect(coin.rect):
                 coin.kill()
-                sfx.play(bling)
+                bling.play()
                 self.score += 100
             elif coin.rect.x < -coin.rect.width:
                 coin.kill()
 
     def check_obstacle_collision(self):
         for obstacle in self.obstacles.sprites():
-            if self.player1.rect.colliderect(obstacle.rect):
+            if self.player1.rect.colliderect(obstacle.rect) and not obstacle.hit:
                 obstacle.hit = True
+                hit.play()
             elif obstacle.rect.x < -obstacle.rect.width:
                 obstacle.kill()
 
@@ -82,4 +83,4 @@ class Gameboard:
         self.obstacles.draw(self.surface)
         self.coins.draw(self.surface)
         if self.player1.check_bump(screen_width, screen_height):
-            sfx.play(bump)
+            bump.play()
