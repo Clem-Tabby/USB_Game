@@ -55,8 +55,8 @@ class Gameboard:
         if self.joystick_count != 0:
             horiz_axis_pos = self.my_joystick.get_axis(0)
             vert_axis_pos = self.my_joystick.get_axis(1)
+            self.player1.update((horiz_axis_pos, vert_axis_pos))
         self.spawn_coins(coin_spawn_percent)
-        self.player1.update((horiz_axis_pos, vert_axis_pos))
         self.check_coin_collision()
         self.coins.update()
         self.surface.fill(background_color)

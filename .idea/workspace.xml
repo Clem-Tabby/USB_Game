@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Coins spawn along right screen edge, code refactored to make use of new Gameboard class">
+      <change beforePath="$PROJECT_DIR$/.idea/USB_Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/USB_Game.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sfx/coin.wav" beforeDir="false" afterPath="$PROJECT_DIR$/sfx/bling.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/sounds.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
