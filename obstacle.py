@@ -3,12 +3,14 @@ import pygame
 import random
 from support import import_folder
 from settings import obstacle_speed
+from sounds import sfx, hit
 
 
 class Obstacle(pygame.sprite.Sprite):
     def __init__(self, pos):
         super().__init__()
         self.hit = False
+        self.played_hit_sound = False
         self.speed = obstacle_speed
         self.obstacle_choices = ['rock', 'trashcan']
         folder_path = './graphics/obstacles/' + random.choice(self.obstacle_choices)
@@ -20,6 +22,9 @@ class Obstacle(pygame.sprite.Sprite):
         self.height = self.rect.height
 
     def animate_hit(self):
+        if not self.played_hit_sound:
+            sfx.play(hit)
+            self.played_hit_sound = True
         if self.frame_index <= len(self.frames):
             self.frame_index += self.animation_speed
         if self.frame_index >= len(self.frames) - 1:

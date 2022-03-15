@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Coins spawn along right screen edge, code refactored to make use of new Gameboard class">
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/trashcan/trashcan2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/trashcan/trashcan3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/trashcan/trashcan4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/obstacle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sfx/dead.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sfx/hit.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/USB_Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/USB_Game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Obstacles added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coin.py" beforeDir="false" afterPath="$PROJECT_DIR$/coin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/obstacles/rock/rock.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/obstacles/rock/rock1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/obstacles/trashcan/trashcan.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/obstacles/trashcan/trashcan1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obstacle.py" beforeDir="false" afterPath="$PROJECT_DIR$/obstacle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/sounds.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647269558277</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Obstacles added">
+      <created>1647356036230</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647356036230</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Coins spawn along right screen edge, code refactored to make use of new Gameboard class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coins spawn along right screen edge, code refactored to make use of new Gameboard class" />
+    <MESSAGE value="Obstacles added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Obstacles added" />
   </component>
 </project>
