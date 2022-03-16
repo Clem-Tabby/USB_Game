@@ -7,9 +7,9 @@ class LifeGuage(pygame.sprite.Sprite):
     def __init__(self, pos):
         super().__init__()
         self.lives = 3
-        self.rect = self.image.get_rect(topleft=pos)
 
-    # reduce lives by 1
+
+    # reduce lives by 1 and animate heart breaking
     def damage(self):
         self.lives -= 1
 

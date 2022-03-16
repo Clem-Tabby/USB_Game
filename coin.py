@@ -21,7 +21,6 @@ class Coin(pygame.sprite.Sprite):
         self.frame_index += self.animation_speed
         if self.frame_index >= len(self.frames):
             self.frame_index = 0
-
         self.image = self.frames[int(self.frame_index)]
 
     def update(self):

@@ -4,23 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Added obstacle sound effects">
-      <change afterPath="$PROJECT_DIR$/heart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/life_guage.py" afterDir="false" />
+    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="SFX no longer cut each other off, SFX volume can now be adjusted in settings.py">
+      <change afterPath="$PROJECT_DIR$/graphics/player/bucket truck2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/bucket truck3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/bucket truck4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/graphics/player/bucket truck5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin.py" beforeDir="false" afterPath="$PROJECT_DIR$/coin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts1.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts2.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts3.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts4.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts5.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts6.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts7.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/hearts/hearts8.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/heart/hearts8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/obstacles/rock/rock1.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/obstacles/rock/rock1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphics/player/Bucket Truck.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/player/bucket truck1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/life_guage.py" beforeDir="false" afterPath="$PROJECT_DIR$/life_guage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obstacle.py" beforeDir="false" afterPath="$PROJECT_DIR$/obstacle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/sounds.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647357765435</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="SFX no longer cut each other off, SFX volume can now be adjusted in settings.py">
+      <created>1647374930610</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647374930610</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,6 +206,7 @@
     <MESSAGE value="Coins spawn along right screen edge, code refactored to make use of new Gameboard class" />
     <MESSAGE value="Obstacles added" />
     <MESSAGE value="Added obstacle sound effects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added obstacle sound effects" />
+    <MESSAGE value="SFX no longer cut each other off, SFX volume can now be adjusted in settings.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="SFX no longer cut each other off, SFX volume can now be adjusted in settings.py" />
   </component>
 </project>

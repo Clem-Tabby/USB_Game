@@ -1,6 +1,8 @@
 # USB Game
 #
-# This is a simple game designed to demonstrate the functionality of a USB joystick
+# This is a simple game designed to demonstrate
+# the functionality of a USB joystick
+#
 # Music: 03 Chibi Ninja.mp3 by Eric Skiff
 # Code by Nicholas Farrell
 

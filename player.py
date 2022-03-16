@@ -1,21 +1,30 @@
 
 import pygame
+from support import import_folder
 
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, pos):
         super().__init__()
-        image = pygame.image.load('graphics/player/Bucket Truck.png').convert_alpha()
+        self.frame_index = 0
+        self.animation_speed = 0.15
+        self.frames = import_folder('./graphics/player')
+        image = self.frames[self.frame_index]
         self.image = image
         self.rect = self.image.get_rect(topleft=pos)
+        self.rect.inflate(-4, -8)
         self.hit = False
-        self.old_x = 0
-        self.old_y = 0
 
-# updates player position based on incoming joystick tuple
+    def animate(self):
+        self.frame_index += self.animation_speed
+        if self.frame_index >= len(self.frames):
+            self.frame_index = 0
+        print(self.frame_index)
+        self.image = self.frames[int(self.frame_index)]
+
+    # updates player position based on incoming joystick tuple
     def update(self, new_pos):
-        self.old_x = self.rect.x
-        self.old_y = self.rect.y
+        self.animate()
         scaled_pos = [int(i * 10) for i in new_pos]
         self.rect.x += -1 * scaled_pos[0]
         self.rect.y += scaled_pos[1]

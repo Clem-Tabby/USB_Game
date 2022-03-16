@@ -8,6 +8,7 @@ from settings import screen_height, screen_width, coin_spawn_percent, \
 import random
 from sounds import bump, bling, hit
 
+
 class Gameboard:
 
     def __init__(self, surface):
@@ -33,7 +34,7 @@ class Gameboard:
         score_string = 'SCORE: ' + str(self.score)
         score_font = pygame.font.Font('freesansbold.ttf', 25)
         score_text = score_font.render(score_string, True, (0, 0, 0))
-        surface.blit(score_text, (10,10))
+        surface.blit(score_text, (10, 10))
 
     # spawns coins randomly along right edge of board,
     # spawn_percent defines percentage chance that a coin spawns
@@ -49,6 +50,7 @@ class Gameboard:
             obstacle = Obstacle((screen_width, int(random.uniform(35, screen_height - 16))))
             self.obstacles.add(obstacle)
 
+    # handles coin collisions with the player and cleans up off-screen coins
     def check_coin_collision(self):
         for coin in self.coins.sprites():
             if self.player1.rect.colliderect(coin.rect):
@@ -58,6 +60,7 @@ class Gameboard:
             elif coin.rect.x < -coin.rect.width:
                 coin.kill()
 
+    # handles obstacle collisions with the player and cleans up off-screen obstacles
     def check_obstacle_collision(self):
         for obstacle in self.obstacles.sprites():
             if self.player1.rect.colliderect(obstacle.rect) and not obstacle.hit:
