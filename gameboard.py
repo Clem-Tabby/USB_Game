@@ -7,6 +7,7 @@ from settings import screen_height, screen_width, coin_spawn_percent, \
     background_color, obstacle_spawn_percent
 import random
 from sounds import bump, bling, hit
+from life_gauge import LifeGauge
 
 
 class Gameboard:
@@ -21,6 +22,9 @@ class Gameboard:
         self.obstacles = pygame.sprite.Group()
         self.player1 = Player((screen_width / 2, screen_height / 2))
         self.player.add(self.player1)
+
+        # Life gauge setup
+        self.life_gauge = LifeGauge((650, 10))
 
         # joystick setup
         self.joystick_count = pygame.joystick.get_count()
@@ -66,6 +70,7 @@ class Gameboard:
             if self.player1.rect.colliderect(obstacle.rect) and not obstacle.hit:
                 obstacle.hit = True
                 hit.play()
+                self.life_gauge.damage()
             elif obstacle.rect.x < -obstacle.rect.width:
                 obstacle.kill()
 
@@ -78,10 +83,12 @@ class Gameboard:
         self.spawn_obstacles(obstacle_spawn_percent)
         self.check_coin_collision()
         self.check_obstacle_collision()
+        self.life_gauge.update()
         self.coins.update()
         self.obstacles.update()
         self.surface.fill(background_color)
         self.draw_score(self.surface)
+        self.life_gauge.draw(self.surface)
         self.player.draw(self.surface)
         self.obstacles.draw(self.surface)
         self.coins.draw(self.surface)

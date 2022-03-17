@@ -14,7 +14,7 @@ class Heart(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=pos)
 
     def animate(self):
-        if self.frame_index <= len(self.frames) -1:
+        if self.frame_index <= len(self.frames) - 1:
             self.frame_index += self.animation_speed
         self.image = self.frames[int(self.frame_index)]
 
@@ -23,4 +23,5 @@ class Heart(pygame.sprite.Sprite):
         self.image = self.frames[int(self.frame_index)]
 
     def update(self):
-        self.animate()
+        if self.broken:
+            self.animate()

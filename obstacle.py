@@ -12,7 +12,7 @@ class Obstacle(pygame.sprite.Sprite):
         self.hit = False
         self.played_hit_sound = False
         self.speed = obstacle_speed
-        self.obstacle_choices = ['rock', 'trashcan']
+        self.obstacle_choices = ['rock', 'trashcan', 'cone']
         self.frames = import_folder('./graphics/obstacles/' + random.choice(self.obstacle_choices))
         self.frame_index = 0
         self.animation_speed = 0.1

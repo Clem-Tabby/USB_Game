@@ -19,7 +19,6 @@ class Player(pygame.sprite.Sprite):
         self.frame_index += self.animation_speed
         if self.frame_index >= len(self.frames):
             self.frame_index = 0
-        print(self.frame_index)
         self.image = self.frames[int(self.frame_index)]
 
     # updates player position based on incoming joystick tuple
@@ -32,8 +31,7 @@ class Player(pygame.sprite.Sprite):
     def check_bump(self, screen_width, screen_height):
         if self.rect.x < 0:
             self.rect.x = 0
-            if self.old_x != 0:
-                self.hit = True
+            self.hit = True
         elif self.rect.x > screen_width - self.rect.width:
             self.rect.x = screen_width - self.rect.width
             self.hit = True
