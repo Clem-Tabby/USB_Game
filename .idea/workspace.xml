@@ -4,28 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Debug error when joystick isn't connected">
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/cone/cone1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/cone/cone2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/cone/cone3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/cone/cone4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/cone/cone5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/cone/cone6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/cone/cone7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/rock/rock2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/rock/rock3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/graphics/obstacles/rock/rock4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/USB_Game.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/USB_Game.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_2022_7_58_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_2022_7_58_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Added cone obstacle and life gauge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/obstacles/rock/rock1.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/obstacles/rock/rock1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/heart.py" beforeDir="false" afterPath="$PROJECT_DIR$/heart.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/life_guage.py" beforeDir="false" afterPath="$PROJECT_DIR$/life_gauge.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obstacle.py" beforeDir="false" afterPath="$PROJECT_DIR$/obstacle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/player.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sounds.py" beforeDir="false" afterPath="$PROJECT_DIR$/sounds.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,8 +135,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.player" />
         <item itemvalue="Python.gameboard" />
+        <item itemvalue="Python.player" />
         <item itemvalue="Python.coin" />
       </list>
     </recent_temporary>
@@ -186,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647357765435</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added cone obstacle and life gauge">
+      <created>1647544683356</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1647544683356</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,17 +198,7 @@
     <MESSAGE value="Coins spawn along right screen edge, code refactored to make use of new Gameboard class" />
     <MESSAGE value="Obstacles added" />
     <MESSAGE value="Added obstacle sound effects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added obstacle sound effects" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/gameboard.py</url>
-          <line>1</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added cone obstacle and life gauge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added cone obstacle and life gauge" />
   </component>
 </project>

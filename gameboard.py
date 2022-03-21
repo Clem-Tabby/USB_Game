@@ -6,13 +6,14 @@ from player import Player
 from settings import screen_height, screen_width, coin_spawn_percent, \
     background_color, obstacle_spawn_percent
 import random
-from sounds import bump, bling, hit
+from sounds import bump, bling, hit, dead, background_music, chibiNinja
 from life_gauge import LifeGauge
 
 
 class Gameboard:
 
     def __init__(self, surface):
+        background_music.play(chibiNinja, loops=-1)
         self.surface = surface
         self.score = 0
 
@@ -45,19 +46,19 @@ class Gameboard:
     # per tick of the game clock
     def spawn_coins(self, coin_spawn_percent):
         if random.uniform(0, 100) <= coin_spawn_percent:
-            coin = Coin((screen_width, int(random.uniform(35, screen_height - 16))))
+            coin = Coin((screen_width, int(random.uniform(40, screen_height - 16))))
             self.coins.add(coin)
 
     # functions similarly to spawn_coins method
     def spawn_obstacles(self, obstacle_spawn_percent):
         if random.uniform(0, 100) <= obstacle_spawn_percent:
-            obstacle = Obstacle((screen_width, int(random.uniform(35, screen_height - 16))))
+            obstacle = Obstacle((screen_width, int(random.uniform(40, screen_height - 16))))
             self.obstacles.add(obstacle)
 
     # handles coin collisions with the player and cleans up off-screen coins
     def check_coin_collision(self):
         for coin in self.coins.sprites():
-            if self.player1.rect.colliderect(coin.rect):
+            if pygame.sprite.collide_mask(self.player1, coin) and self.player1.alive:
                 coin.kill()
                 bling.play()
                 self.score += 100
@@ -67,12 +68,29 @@ class Gameboard:
     # handles obstacle collisions with the player and cleans up off-screen obstacles
     def check_obstacle_collision(self):
         for obstacle in self.obstacles.sprites():
-            if self.player1.rect.colliderect(obstacle.rect) and not obstacle.hit:
+            if pygame.sprite.collide_mask(self.player1, obstacle) and not obstacle.hit and self.player1.alive:
                 obstacle.hit = True
                 hit.play()
                 self.life_gauge.damage()
             elif obstacle.rect.x < -obstacle.rect.width:
                 obstacle.kill()
+
+    # handles events when player dies
+    def check_death(self):
+        if self.life_gauge.lives <= 0 and self.player1.alive:
+            self.player1.alive = False
+            background_music.stop()
+            dead.play()
+
+    def reset(self):
+        for coin in self.coins:
+            coin.kill()
+        for obstacle in self.obstacles:
+            obstacle.kill()
+        self.player1.rect.x = screen_width / 2
+        self.player1.rect.y = screen_height / 2
+        self.score = 0
+        self.player1.alive = True
 
     def run(self):
         if self.joystick_count != 0:
@@ -84,8 +102,9 @@ class Gameboard:
         self.check_coin_collision()
         self.check_obstacle_collision()
         self.life_gauge.update()
-        self.coins.update()
-        self.obstacles.update()
+        if self.player1.alive:
+            self.coins.update()
+            self.obstacles.update()
         self.surface.fill(background_color)
         self.draw_score(self.surface)
         self.life_gauge.draw(self.surface)
@@ -94,3 +113,4 @@ class Gameboard:
         self.coins.draw(self.surface)
         if self.player1.check_bump(screen_width, screen_height):
             bump.play()
+        self.check_death()

@@ -17,7 +17,6 @@ pygame.init()
 
 # sound setup
 pygame.mixer.init()
-background_music.play(chibiNinja, loops=-1)
 
 # screen setup
 screen = pygame.display.set_mode((screen_width, screen_height))
