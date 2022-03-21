@@ -16,6 +16,7 @@ class Gameboard:
         background_music.play(chibiNinja, loops=-1)
         self.surface = surface
         self.score = 0
+        self.obstacle_spawn_percent = obstacle_spawn_percent
 
         # Define sprite groups
         self.coins = pygame.sprite.Group()
@@ -49,11 +50,12 @@ class Gameboard:
             coin = Coin((screen_width, int(random.uniform(40, screen_height - 16))))
             self.coins.add(coin)
 
-    # functions similarly to spawn_coins method
+    # functions similarly to spawn_coins method, but slowly increases spawn percentage
     def spawn_obstacles(self, obstacle_spawn_percent):
         if random.uniform(0, 100) <= obstacle_spawn_percent:
             obstacle = Obstacle((screen_width, int(random.uniform(40, screen_height - 16))))
             self.obstacles.add(obstacle)
+        obstacle_spawn_percent += 0.01
 
     # handles coin collisions with the player and cleans up off-screen coins
     def check_coin_collision(self):
@@ -79,8 +81,12 @@ class Gameboard:
     def check_death(self):
         if self.life_gauge.lives <= 0 and self.player1.alive:
             self.player1.alive = False
-            background_music.stop()
+            background_music.pause()
             dead.play()
+        if not self.player1.alive:
+            keys = pygame.key.get_pressed()
+            if keys[pygame.K_RETURN]:
+                self.reset()
 
     def reset(self):
         for coin in self.coins:
@@ -90,7 +96,10 @@ class Gameboard:
         self.player1.rect.x = screen_width / 2
         self.player1.rect.y = screen_height / 2
         self.score = 0
+        self.life_gauge.reset()
         self.player1.alive = True
+        self.obstacle_spawn_percent = obstacle_spawn_percent
+        background_music.unpause()
 
     def run(self):
         if self.joystick_count != 0:
@@ -98,7 +107,7 @@ class Gameboard:
             vert_axis_pos = self.my_joystick.get_axis(1)
             self.player1.update((horiz_axis_pos, vert_axis_pos))
         self.spawn_coins(coin_spawn_percent)
-        self.spawn_obstacles(obstacle_spawn_percent)
+        self.spawn_obstacles(self.obstacle_spawn_percent)
         self.check_coin_collision()
         self.check_obstacle_collision()
         self.life_gauge.update()
@@ -114,3 +123,5 @@ class Gameboard:
         if self.player1.check_bump(screen_width, screen_height):
             bump.play()
         self.check_death()
+
+

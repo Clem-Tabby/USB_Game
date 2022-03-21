@@ -21,6 +21,7 @@ class Heart(pygame.sprite.Sprite):
     def reset(self):
         self.frame_index = 0
         self.image = self.frames[int(self.frame_index)]
+        self.broken = False
 
     def update(self):
         if self.broken:

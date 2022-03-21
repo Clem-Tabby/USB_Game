@@ -16,21 +16,18 @@ class Player(pygame.sprite.Sprite):
         self.alive = True
 
     def animate(self):
-        if self.alive:
-            self.frame_index += self.animation_speed
-            if self.frame_index >= len(self.frames):
-                self.frame_index = 0
-            self.image = self.frames[int(self.frame_index)]
-        else:
-            pass
+        self.frame_index += self.animation_speed
+        if self.frame_index >= len(self.frames):
+            self.frame_index = 0
+        self.image = self.frames[int(self.frame_index)]
 
     # updates player position based on incoming joystick tuple
     def update(self, new_pos):
-        self.animate()
         if self.alive:
             scaled_pos = [int(i * 4) for i in new_pos]
-            self.rect.x += -0.6 * scaled_pos[0]
+            self.rect.x += -0.8 * scaled_pos[0]
             self.rect.y += scaled_pos[1]
+            self.animate()
 
     def check_bump(self, screen_width, screen_height):
         if self.rect.x < 0:

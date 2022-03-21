@@ -11,7 +11,7 @@ from pygame.locals import *
 import sys
 from settings import screen_width, screen_height
 from gameboard import Gameboard
-from sounds import background_music, chibiNinja, shoot
+from sounds import shoot
 
 pygame.init()
 
@@ -36,6 +36,8 @@ while True:
             sys.exit()
         if event.type == JOYBUTTONDOWN:
             if event.button == 0:
+                shoot.play()
+            if event.button == 1:
                 shoot.play()
     gameboard.run()
     pygame.display.update()

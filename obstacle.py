@@ -15,7 +15,7 @@ class Obstacle(pygame.sprite.Sprite):
         self.obstacle_choices = ['rock', 'trashcan', 'cone']
         self.frames = import_folder('./graphics/obstacles/' + random.choice(self.obstacle_choices))
         self.frame_index = 0
-        self.animation_speed = 0.1
+        self.animation_speed = 0.2
         self.image = self.frames[self.frame_index]
         self.rect = self.image.get_rect(topleft=pos)
 

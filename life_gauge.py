@@ -30,6 +30,8 @@ class LifeGauge(pygame.sprite.Sprite):
     # reset hearts
     def reset(self):
         self.lives = 3
+        for heart in self.hearts:
+            heart.reset()
 
     def update(self):
         self.heart1.update()
