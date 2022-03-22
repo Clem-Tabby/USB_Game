@@ -38,7 +38,7 @@ class Gameboard:
 
     def draw_score(self, surface):
         score_string = 'SCORE: ' + str(self.score)
-        score_font = pygame.font.Font('freesansbold.ttf', 25)
+        score_font = pygame.font.Font('./fonts/8bitOperatorPlus-Regular.ttf', 25)
         score_text = score_font.render(score_string, True, (0, 0, 0))
         surface.blit(score_text, (10, 10))
 

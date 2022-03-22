@@ -5,6 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Obstacle spawn chance now steadily increases over time and resets on player death.">
+      <change afterPath="$PROJECT_DIR$/build/main/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/Tree-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/Tree-01.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/Tree-02.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/main.exe.manifest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/main.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/warn-main.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/xref-main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/fonts/8bitOperatorPlus-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/coin/coin1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/coin/coin2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/coin/coin3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/coin/coin4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/coin/coin5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/heart/hearts8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/cone/cone1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/cone/cone2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/cone/cone3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/cone/cone4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/cone/cone5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/cone/cone6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/cone/cone7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/rock/rock1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/rock/rock2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/rock/rock3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/rock/rock4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/trashcan/trashcan1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/trashcan/trashcan2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/trashcan/trashcan3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/obstacles/trashcan/trashcan4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/player/bucket truck1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/player/bucket truck2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/player/bucket truck3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/player/bucket truck4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/graphics/player/bucket truck5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/sfx/03 Chibi Ninja.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/sfx/bling.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/sfx/bump.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/sfx/dead.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/sfx/hit.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/sfx/shoot.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/8bitOperatorPlus-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.spec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_2022_7_58_AM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_15_2022_7_58_AM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
     </list>
@@ -19,6 +77,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/trunk" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647950098314</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Obstacle spawn chance now steadily increases over time and resets on player death.">
+      <created>1647950154814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1647950154814</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,7 +270,7 @@
     <MESSAGE value="Obstacles added" />
     <MESSAGE value="Added obstacle sound effects" />
     <MESSAGE value="Fixed bugs on player death.  Game fully resets with enter key." />
-    <MESSAGE value="Obstacle spawn chance now steadily increases over time and resets on player death." />
-    <option name="LAST_COMMIT_MESSAGE" value="Obstacle spawn chance now steadily increases over time and resets on player death." />
+    <MESSAGE value="Removed print function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed print function" />
   </component>
 </project>
