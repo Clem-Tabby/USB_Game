@@ -55,7 +55,7 @@ class Gameboard:
         if random.uniform(0, 100) <= obstacle_spawn_percent:
             obstacle = Obstacle((screen_width, int(random.uniform(40, screen_height - 16))))
             self.obstacles.add(obstacle)
-        obstacle_spawn_percent += 0.01
+        self.obstacle_spawn_percent += 0.001
 
     # handles coin collisions with the player and cleans up off-screen coins
     def check_coin_collision(self):
@@ -123,5 +123,6 @@ class Gameboard:
         if self.player1.check_bump(screen_width, screen_height):
             bump.play()
         self.check_death()
+        print(self.obstacle_spawn_percent)
 
 
