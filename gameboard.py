@@ -123,6 +123,4 @@ class Gameboard:
         if self.player1.check_bump(screen_width, screen_height):
             bump.play()
         self.check_death()
-        print(self.obstacle_spawn_percent)
-
 

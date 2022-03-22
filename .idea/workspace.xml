@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Fixed bugs on player death.  Game fully resets with enter key.">
+    <list default="true" id="c5b02601-0cca-4095-bb14-c49d7ef11492" name="Changes" comment="Obstacle spawn chance now steadily increases over time and resets on player death.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/gameboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647893446751</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Obstacle spawn chance now steadily increases over time and resets on player death.">
+      <created>1647950098314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647950098314</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +202,7 @@
     <MESSAGE value="Obstacles added" />
     <MESSAGE value="Added obstacle sound effects" />
     <MESSAGE value="Fixed bugs on player death.  Game fully resets with enter key." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bugs on player death.  Game fully resets with enter key." />
+    <MESSAGE value="Obstacle spawn chance now steadily increases over time and resets on player death." />
+    <option name="LAST_COMMIT_MESSAGE" value="Obstacle spawn chance now steadily increases over time and resets on player death." />
   </component>
 </project>
